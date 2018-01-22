@@ -22,14 +22,14 @@ const router = express.Router();
 // router.use('/users', usersRouter);
 
 const isProduction = process.env.NODE_ENV === 'production';
-// serve our client assets
-// asset folder in dev mode
-const assetFolder = path.resolve(__dirname, '../../_client', 'assets')
-// if production asset folder is copied to dist/app-bundle
-if (isProduction) {
-  assetFolder = path.resolve(__dirname, '../../dist', 'app-bundle', 'assets')
-}
+// // serve our client assets
+// // asset folder in dev mode
+// const assetFolder = path.resolve(__dirname, '../../_client', 'assets')
+// // if production asset folder is copied to dist/app-bundle
+// if (isProduction) {
+//   assetFolder = path.resolve(__dirname, '../../dist', 'app-bundle', 'assets')
+// }
 
-router.use('/assets', express.static(assetFolder));
+// router.use('/assets', express.static(assetFolder));
 
-module.exports = router
+export default router
