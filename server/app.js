@@ -8,7 +8,7 @@ import routes from './routes';
 
 // Set up the express app
 const app = express();
-const port = parseInt(process.env.SERVER_PORT, 10) || 5000;
+const port = parseInt(process.env.SERVER_PORT, 10) || 8000;
 // setting port
 app.set('port', port)
 // Log requests to the console.
@@ -19,8 +19,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // Parse incoming cookies
 app.use(cookieParser());
-
-
 
 // Mount our main api router
 app.use('/api', routes);
